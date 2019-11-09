@@ -32,6 +32,6 @@ router(app);
 //PORT => constant that shouldn't be changed frequently
 const PORT = process.env.PORT || 5000;
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Server Listening on ${PORT}`);
 });
