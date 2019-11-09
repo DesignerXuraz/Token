@@ -41,7 +41,7 @@ const localLogin = new localStrategy(
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromHeader("authorization"),
   //Telling Jwt Strategy whenever req comes in & we want passport to handle it & look at req header
-  secretOrKey: configSec.secret
+  secretOrKey: configSec
 };
 
 //Create Jwt Strategy to verify Token
