@@ -1,5 +1,5 @@
 const User = require("../models/user");
-const configSec = require("../config/keys");
+const configSec = require("../config/secret");
 const bcrypt = require("bcrypt");
 const passport = require("passport"); //Library that we use to figure out whether user is currently authenticated or not to use our app & Strategy attempts to authenticate user with diff methods
 const JwtStrategy = require("passport-jwt").Strategy; //Strategy => Method for authenticating user using different method like: jwt,email,passport,google,facebook
@@ -41,7 +41,7 @@ const localLogin = new localStrategy(
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromHeader("authorization"),
   //Telling Jwt Strategy whenever req comes in & we want passport to handle it & look at req header
-  secretOrKey: configSec.secret
+  secretOrKey: configSec
 };
 
 //Create Jwt Strategy to verify Token
