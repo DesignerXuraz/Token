@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "api for token based auth",
   "main": "server.js",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.4.1"
+  },
   "scripts": {
-    "dev": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js"
   },
   "author": "suraj adhikari",
   "license": "ISC",

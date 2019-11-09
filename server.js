@@ -29,8 +29,9 @@ app.use(cors());
 router(app);
 
 //SERVER SETUP
-const port = process.env.PORT || 5000;
+//PORT => constant that shouldn't be changed frequently
+const PORT = process.env.PORT || 5000;
 
 app.listen(port, () => {
-  console.log(`Server Listening on ${port}`);
+  console.log(`Server Listening on ${PORT}`);
 });
